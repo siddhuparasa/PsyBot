@@ -12,7 +12,7 @@ from safety import check_safety
 
 app = FastAPI(
     title="PsyBot API",
-    description="Psychology-focused support chatbot",
+    description="AI-powered psychology support assistant",
     version="2.0.0"
 )
 
@@ -21,19 +21,13 @@ app = FastAPI(
 # CORS
 # ============================================================
 
-# During local development:
-# http://localhost:5173
-#
-# After Vercel deployment:
-# Replace the placeholder below with your actual
-# Vercel URL.
-
 ALLOWED_ORIGINS = [
+    # Local development
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 
-    # Add your Vercel URL here after deployment:
-    # "https://your-psybot.vercel.app",
+    # Vercel production
+    "https://psy-bot-livid.vercel.app"
 ]
 
 
@@ -46,7 +40,7 @@ app.add_middleware(
 
     allow_methods=["*"],
 
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
 
 
@@ -145,9 +139,8 @@ def chat(request: ChatRequest):
 
         return {
             "response": (
-                "I'm having trouble generating "
-                "a response right now. Please "
-                "try again in a moment."
+                "I'm unable to respond right now. "
+                "Please try again in a moment."
             ),
             "safety_triggered": False
         }
