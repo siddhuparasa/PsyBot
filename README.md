@@ -1,7 +1,7 @@
 
 # 🧠 PsyBot — AI-Powered Psychology Support Chatbot
 
-PsyBot is an AI-powered psychology support chatbot that uses **Retrieval-Augmented Generation (RAG)** to provide context-aware, psychology-focused conversational responses. It combines semantic search, vector retrieval, and language generation to deliver relevant and informative responses.
+PsyBot is an AI-powered psychology support chatbot that uses Retrieval-Augmented Generation (RAG) and the Psychology-10K dataset to provide context-aware, psychology-focused conversational responses. It combines semantic search, vector retrieval, and language generation to deliver relevant and informative responses.
 
 ## ✨ Features
 
